@@ -1,0 +1,1028 @@
+// Google font Outfit
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", "Arial Narrow", Arial, sans-serif;
+}
+
+// Colors
+$primary: #9220d9;
+$secondary: #d187ff;
+$bgcolor: #0C0C0E;
+$lessDark: #1e1e22;
+$bordercolor: #f5f5f5;
+$darkbordercolor: #ededed;
+$light: #ffffff;
+
+// Buttons
+
+.dark-btn {
+  background: $primary;
+  color: $light;
+  border-radius: 10px;
+
+  &:hover {
+    background: $light;
+    color: $primary;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.red-btn {
+  background: $primary;
+  color: $light;
+  border-radius: 10px;
+
+  &:hover {
+    background: $primary;
+    color: $light;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.light-btn {
+  background: $light;
+  color: $secondary;
+  border-radius: 10px;
+
+  &:hover {
+    background: $primary;
+    color: $light;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// Common Mixins
+@mixin centerMid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin shadow {
+  box-shadow: 30px 42px 31px rgba(0, 0, 0, 0.01),
+    13px 19px 23px rgba(0, 0, 0, 0.02), 3px 5px 13px rgba(0, 0, 0, 0.02),
+    0px 0px 0px rgba(0, 0, 0, 0.02);
+}
+
+// common classes
+.centerMid {
+  @include centerMid();
+}
+
+.sticky-top {
+  top: -1px !important;
+}
+
+// Section Header
+
+section.header {
+  border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.1);
+  background-color: $bgcolor;
+
+  nav {
+    .navbar-brand {
+      img {
+        width: 132px;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        a.nav-link {
+          color: $light;
+          opacity: 0.8;
+          white-space: nowrap;
+          border-bottom: 2px solid $bgcolor;
+
+          &:hover {
+            color: $secondary;
+            border-bottom: 2px solid $primary;
+          }
+        }
+      }
+    }
+
+    .searchBox {
+      @include centerMid();
+      gap: 8px;
+      margin-left: 60px;
+      white-space: nowrap;
+    }
+
+    button.navbar-toggler {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// Section Slider{
+section.slider {
+  background-color: $bgcolor;
+
+  .owl-carousel-slider {
+    .item {
+      position: relative;
+      text-align: center;
+      color: $light;
+
+      .detailsBox {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 200px;
+        transform: translate(-50%);
+      }
+    }
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+// Section clients
+section.clients {
+  padding-top: 30px;
+  background: linear-gradient(360deg,
+      rgba($color: $bgcolor, $alpha: 1) 50%,
+      rgba($color: $secondary, $alpha: 1) 50%);
+
+  .container {
+    background: $primary;
+    padding: 30px;
+    border-radius: 20px;
+    @include shadow();
+  }
+}
+
+// Section About
+section.aboutUs {
+  padding: 70px 0;
+  color: $light;
+  background-color: $bgcolor;
+}
+
+// Section Certification
+
+section.certification {
+  padding: 70px 0;
+  background: $primary;
+  color: $light;
+  text-align: center;
+
+  p {
+    max-width: 800px;
+    margin: 0 auto 50px;
+  }
+}
+
+//Section Service
+
+section.service {
+  padding: 70px 0;
+  background: rgba($color: $bgcolor, $alpha: 0.2);
+  color: $secondary;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .content {
+    @include centerMid();
+    gap: 20px;
+    background: $light;
+    height: 128px;
+    border-radius: 20px;
+    @include shadow();
+    border: 1.5px solid $bordercolor;
+    justify-content: flex-start !important;
+    padding-left: 50px;
+    position: relative;
+    border: 1.5px solid $darkbordercolor;
+    z-index: 0;
+
+    .iconBox {
+      width: 75px;
+      height: 75px;
+      background-color: $light;
+      border-radius: 50%;
+
+      .icon {
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+      }
+
+      .icon1 {
+        background-image: url("../assets/icons/platform.svg");
+      }
+
+      .icon2 {
+        background-image: url("../assets/icons/heart.svg");
+      }
+    }
+
+    .circle {
+      position: absolute;
+      @include centerMid();
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background-color: $light;
+      color: $secondary;
+      display: none;
+      @include shadow();
+
+      p {
+        text-align: center;
+        font-size: 12px;
+        max-width: 80px;
+        font-weight: 500;
+      }
+    }
+
+    .circle1 {
+      top: -115px;
+      left: 20px;
+    }
+
+    .circle2 {
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .circle3 {
+      bottom: -115px;
+      left: 20px;
+    }
+
+    .circle4 {
+      top: -115px;
+      left: 20px;
+    }
+
+    .circle5 {
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .circle6 {
+      bottom: -115px;
+      left: 20px;
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      .circle {
+        display: flex;
+        transition: 0.5s;
+      }
+
+      .heading {
+        color: $light;
+      }
+
+      .iconBox {
+        .icon1 {
+          background-image: url("../assets/icons/platformHover.svg");
+        }
+
+        .icon2 {
+          background-image: url("../assets/icons/heartHover.svg");
+        }
+      }
+    }
+  }
+}
+
+// Section.Idea
+
+section.idea {
+  padding: 70px 0 0 0;
+  color: $light;
+  background-color: $bgcolor;
+}
+
+// Section Case study
+
+section.casestudies {
+  padding: 70px 0;
+  background-color: $bgcolor;
+
+  h1 {
+    margin-bottom: 50px;
+    color: $light;
+  }
+
+  .slidenav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+
+    .btnBox {
+      border: 1px solid $secondary;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      @include centerMid();
+
+      .fa-arrow-left {
+        color: $secondary;
+      }
+
+      .fa-arrow-right {
+        color: $light;
+      }
+    }
+
+    .btnBox1 {
+      background: $primary;
+    }
+
+    .btnBox2 {
+      background: $primary;
+    }
+  }
+
+  .owl-carousel-casestudy {
+    .item {
+      position: relative;
+
+      .textBox {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary;
+        color: $light;
+        border-radius: 20px;
+        padding: 20px;
+        @include centerMid();
+        overflow: hidden;
+        transform: translateY(-103%);
+      }
+
+      &:hover {
+        .textBox {
+          transform: translateY(0%);
+          transition: all ease-in 0.4s;
+        }
+      }
+    }
+  }
+}
+
+// Section Why us
+
+section.whyus {
+  padding: 70px 0;
+  color: $light;
+  background: $primary;
+
+  .sectionTitle {
+    p {
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+
+  .content {
+    background: $light;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 50px;
+    border: 2px solid $light;
+    @include shadow();
+    color: $bgcolor;
+
+    .heading {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+
+      h2 {
+        font-size: 24px;
+        color: $primary;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    transition: 1s;
+
+    &:hover {
+      border: 2px solid $primary;
+    }
+  }
+}
+
+// Section Tech Stack
+section.techStack {
+  padding: 70px 0;
+  background-color: $bgcolor;
+  color: $light;
+
+  .tabButtonBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .tabButton {
+      border: 1.5px solid $darkbordercolor;
+      border-radius: 15px;
+      padding: 12px;
+      text-align: center;
+      color: $light;
+      cursor: pointer;
+
+      &.active {
+        color: $light;
+        @include shadow();
+        background: $primary;
+      }
+    }
+  }
+
+  .techIcons {
+    border: 1.5px solid $bordercolor;
+    background-color: $lessDark;
+    @include shadow();
+    border-radius: 15px;
+
+    .imgBox {
+      padding: 15px;
+      border-radius: 15px;
+      border: 1.5px solid $darkbordercolor;
+      background: $light;
+      height: 115px;
+      margin-top: 15px;
+      @include centerMid();
+
+      img {
+        width: 50px;
+      }
+
+      &:hover {
+        @include shadow();
+      }
+    }
+  }
+}
+
+// Section Quote
+
+section.quote {
+  color: $light;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg,
+      rgba($color: $primary, $alpha: 1) 50%,
+      rgba($color: $bgcolor, $alpha: 1) 50%);
+
+  .container {
+    padding: 70px 0;
+    background: $secondary;
+    border-radius: 20px;
+
+    .content {
+      padding: 40px;
+    }
+  }
+}
+
+// Section review
+section.reviews {
+  padding: 70px 0;
+  color: $secondary;
+  background: $bgcolor;
+
+  .item {
+    @include shadow();
+    border-radius: 20px;
+    background: $light;
+
+    .starts {
+      img {
+        width: 25px;
+        display: inline-block;
+        margin: 5px;
+      }
+    }
+
+    .clientProfile {
+      display: flex;
+      gap: 10px;
+
+      .img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        p.name {
+          margin-bottom: 0;
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        p.deg {
+          margin-bottom: 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: $primary !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    background: rgba($color: $primary, $alpha: 0.3) !important;
+  }
+}
+
+// Section workwith
+
+section.workwith {
+  padding: 70px 0;
+
+  .cardContainer {
+    background-image: url("../assets/bg-map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .contentBox {
+      @include centerMid();
+      background: $light;
+      border-radius: 20px;
+      padding: 15px;
+      @include shadow();
+      gap: 15px;
+      border: 1.5px solid $bordercolor;
+
+      h3 {
+        margin-bottom: 0;
+        font-size: 24px;
+        color: $primary;
+      }
+    }
+
+    .fitContent {
+      margin: 15px auto;
+      width: fit-content;
+    }
+  }
+
+  .content {
+    padding-left: 40px;
+
+    h1 {
+      color: $primary;
+    }
+  }
+}
+
+// Section Request portfolio
+section.requestportfolio {
+  padding: 70px 0;
+  background-color: $bgcolor;
+
+  h1 {
+    color: $light;
+  }
+
+  form {
+    margin-top: 40px;
+
+    input,
+    textarea {
+      background: $primary;
+      color: $light;
+
+      &:focus {
+        box-shadow: none;
+        background: $primary;
+        color: $light;
+      }
+
+      &::placeholder {
+        color: $light;
+      }
+    }
+
+    button {
+      width: 120px;
+    }
+  }
+}
+
+// Section FeaturedOn
+section.featuredOn {
+  background: $bgcolor;
+
+  .content {
+    background: $primary;
+    border-radius: 20px;
+    padding: 20px;
+    @include shadow();
+    border: 2px solid $bordercolor;
+
+    img.logo {
+      height: 25px;
+    }
+
+    P {
+      &:last-child {
+        margin-top: 15px;
+      }
+    }
+
+    transition: 0.5s;
+
+    &:hover {
+      border: 2px solid $primary;
+    }
+  }
+}
+
+// Footer
+
+footer.footer {
+  padding: 70px 0 0 0;
+  background: $bgcolor;
+
+  .logo {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $light;
+  }
+
+  .secoalMedia {
+    display: flex;
+    gap: 8px;
+
+    .icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1.5px solid rgba($color: $bgcolor, $alpha: 0.7);
+      @include centerMid();
+
+      a {
+        text-decoration: none;
+        color: $secondary;
+      }
+
+      &:hover {
+        background: $primary;
+
+        a {
+          color: $light;
+        }
+      }
+    }
+  }
+
+  h4 {
+    color: $primary;
+    font-size: 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 8px 0;
+
+      a {
+        text-decoration: none;
+        color: $secondary;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid rgba($color: $bgcolor, $alpha: 0.4);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: $lessDark;
+
+    p {
+      margin-bottom: 0;
+      color: $light;
+    }
+  }
+}
+
+// ****************** Healthtech *****************
+@mixin position($justify, $gap) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+section.main {
+  padding: 70px;
+  background-image: url("../assets/mainImg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 420px;
+  background-repeat: no-repeat;
+
+  .centerLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .content {
+    color: $light;
+
+    p {
+      max-width: 270px;
+    }
+  }
+}
+
+section.tabContainer {
+  padding: 10px 0;
+  background: #fef8f8;
+
+  .buttonBox {
+    @include position(center, 10px);
+
+    a {
+      text-decoration: none;
+      color: $secondary;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 12px 40px;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $primary;
+        color: $light;
+      }
+
+      &.active {
+        background-color: $primary;
+        color: $light;
+      }
+    }
+  }
+}
+
+// Section About
+section.aboutHealthTech {
+  padding: 40px 0;
+  color: $secondary;
+}
+
+// Section HealthTech app
+section.healthcareApp {
+  padding: 70px 0;
+  background: rgba($color: $primary, $alpha: 0.03);
+
+  .content {
+    @include shadow();
+    border-radius: 10px;
+    background: $light;
+    height: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    h4 {
+      font-size: 18px;
+      padding: 18px 18px 0;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 0 18px 18px;
+    }
+  }
+}
+
+//Section HealthcareBenefits
+
+section.HealthcareBenefits {
+  padding: 70px 0;
+}
+
+// Section builthealthcareApp
+
+section.builthealthcareApp {
+  padding: 0 0 70px;
+
+  .container {
+    background: $secondary;
+    color: $light;
+    padding: 40px;
+    border-radius: 20px;
+
+    .content {
+      p {
+        color: rgba($color: $light, $alpha: 0.8);
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+// Section whyChooseus
+
+section.whyChooseus {
+  padding: 70px 0;
+  background: rgba($color: $secondary, $alpha: 0.02);
+
+  .content {
+    position: relative;
+    padding: 70px 30px 0;
+
+    @mixin gradientCircle($top, $gradient) {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      top: $top;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -2;
+      background: $gradient;
+    }
+
+    .gradient {
+      @include gradientCircle(0,
+        linear-gradient(180deg, #d92029 0%, rgba(255, 255, 255, 0) 100%));
+    }
+
+    .gradient2 {
+      @include gradientCircle(0,
+        linear-gradient(180deg, #333333 0%, rgba(255, 255, 255, 0) 100%));
+    }
+
+    .lightCircle {
+      @include gradientCircle(10px, $light);
+    }
+
+    text-align: center;
+  }
+}
+
+//section casestudyHealthtech
+
+section.casestudyHealthtech {
+  padding: 70px 0 !important;
+}
+
+//section techStackHealthtech
+section.techStackHealthtech {
+  background: rgba($color: $secondary, $alpha: 0.02);
+}
+
+// section launchOnline
+
+section.launchOnline {
+  padding: 70px 0;
+
+  .content {
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    h1 {
+      max-width: 450px;
+
+      span {
+        color: $primary;
+        font-weight: 700;
+      }
+    }
+
+    p {
+      max-width: 340px;
+
+      span {
+        color: $secondary;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// Section Blog
+section.blog {
+  padding: 70px 0;
+  text-align: center;
+  background: rgba($color: $primary, $alpha: 0.02);
+
+  .toggleButton {
+    border: 1px solid $secondary;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    @include centerMid();
+
+    .fa-arrow-left {
+      color: $secondary;
+    }
+
+    .fa-arrow-right {
+      color: $light;
+    }
+
+    &.leftToggle {
+      background: $light;
+
+      &:hover {
+        background: $secondary;
+
+        .fa-arrow-left {
+          color: $light;
+        }
+      }
+    }
+
+    &.rightToggle {
+      background: $secondary;
+
+      &:hover {
+        background: $light;
+
+        .fa-arrow-right {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .slider {
+    .item {
+      img {
+        width: 100%;
+      }
+
+      p {
+        max-width: 780px;
+        margin: 20px auto;
+      }
+    }
+  }
+}

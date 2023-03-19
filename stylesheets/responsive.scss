@@ -1,0 +1,287 @@
+@import "../stylesheets/style.scss";
+
+@media only screen and (max-width: 1200px) {
+  //Section Service
+
+  section.service {
+    .content {
+      height: 108px;
+      padding-left: 20px;
+
+      .circle {
+        width: 80px;
+        height: 80px;
+        p {
+          font-size: 10px;
+        }
+      }
+      .circle1 {
+        top: -70px;
+        left: 5%;
+      }
+      .circle2 {
+        left: 50%;
+        top: -70px;
+        transform: translateX(-50%);
+      }
+      .circle3 {
+        top: -70px;
+        bottom: auto;
+        left: auto;
+        right: 5%;
+      }
+      .circle4 {
+        top: auto;
+        left: 5%;
+        bottom: -70px;
+      }
+      .circle5 {
+        left: 50%;
+        top: auto;
+        bottom: -70px;
+        transform: translateX(-50%);
+      }
+      .circle6 {
+        bottom: -70px;
+        left: auto;
+        right: 5%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  // Section Slider{
+  section.slider {
+    .owl-carousel-slider {
+      .item {
+        .detailsBox {
+          top: 150px;
+        }
+      }
+    }
+    .owl-dots {
+      bottom: 25px;
+    }
+  }
+
+  // Section Tech Stack
+  section.techStack {
+    .tabButtonBox {
+      flex-direction: row;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .tabButton {
+        padding: 10px;
+      }
+    }
+
+    .techIcons {
+      padding-bottom: 15px;
+      margin-top: 15px;
+      .imgBox {
+        height: 70px;
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  // Section Slider{
+  section.slider {
+    .owl-carousel-slider {
+      .item {
+        .detailsBox {
+          top: 100px;
+        }
+      }
+    }
+    .owl-dots {
+      bottom: 20px;
+    }
+  }
+
+  // Section Case study
+
+  // Section workwith
+
+  section.workwith {
+    padding: 70px 0;
+    .cardContainer {
+      .contentBox {
+        h3 {
+          margin-bottom: 0;
+          font-size: 20px;
+        }
+      }
+      .fitContent {
+        margin: 15px auto;
+        width: fit-content;
+      }
+    }
+    .content {
+      margin-top: 40px;
+      padding-left: 0px;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  // Section Slider{
+  section.slider {
+    .owl-carousel-slider {
+      .item {
+        .detailsBox {
+          top: 100px;
+        }
+      }
+    }
+    .owl-dots {
+      bottom: 20px;
+    }
+  }
+  // Section tabContainer
+  section.tabContainer {
+    .buttonBox {
+      @include position(center, 5px);
+      flex-wrap: wrap;
+      a {
+        font-weight: 400;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  // Section clients
+  section.clients {
+    .textLine {
+      p {
+        text-align: center;
+      }
+    }
+  }
+  // Section Slider{
+  section.slider {
+    .owl-carousel-slider {
+      .item {
+        .detailsBox {
+          h1 {
+            font-size: 25px;
+          }
+          top: 90px;
+        }
+      }
+    }
+    .owl-dots {
+      bottom: 15px;
+    }
+  }
+  // Section Case study
+  section.casestudies {
+    padding: 40px 0 70px 0;
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .owl-carousel-casestudy {
+      .item {
+        .textBox {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  // Section Blog
+  section.blog {
+    .blogButtons {
+      margin-bottom: 15px;
+    }
+    .SliderContainer {
+      order: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  // Section Slider{
+  section.slider {
+    .owl-carousel-slider {
+      .item {
+        .detailsBox {
+          h1 {
+            font-size: 20px;
+          }
+          p {
+            margin: 0 auto 10px;
+            font-size: 13px;
+            max-width: 250px;
+          }
+          top: 30px;
+        }
+      }
+    }
+    .owl-dots {
+      display: none;
+      bottom: 5px;
+    }
+  }
+  //Section Case Study
+  section.casestudies {
+    padding: 40px 0 70px 0;
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+  section.main {
+    padding: 40px;
+    background-position: center;
+    height: 300px;
+  }
+
+  // Section tabContainer
+  section.tabContainer {
+    .buttonBox {
+      @include position(center, 5px);
+      flex-wrap: wrap;
+      a {
+        font-weight: 400;
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  // Footer
+  footer.footer {
+    text-align: center;
+    .secoalMedia {
+      justify-content: center;
+    }
+    .copyright {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  // Section Slider{
+  section.slider {
+    .owl-carousel-slider {
+      .item {
+        .detailsBox {
+          top: 5px;
+        }
+      }
+    }
+  }
+}
