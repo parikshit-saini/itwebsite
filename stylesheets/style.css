@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: "Outfit", "Arial Narrow", Arial, sans-serif;
+  font-family: "poppins", "Arial Narrow", Arial, sans-serif;
+  background: #0C0C0E;
 }
 
 .dark-btn {
@@ -111,13 +112,16 @@ section.slider .owl-dots {
 
 section.clients {
   padding-top: 30px;
-  background: linear-gradient(360deg, #0c0c0e 50%, #d187ff 50%);
+  background: #0C0C0E;
 }
 section.clients .container {
-  background: #9220d9;
+  background: #ffffff;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 30px 42px 31px rgba(0, 0, 0, 0.01), 13px 19px 23px rgba(0, 0, 0, 0.02), 3px 5px 13px rgba(0, 0, 0, 0.02), 0px 0px 0px rgba(0, 0, 0, 0.02);
+}
+section.clients .container img {
+  width: 60px;
 }
 
 section.aboutUs {
@@ -244,7 +248,7 @@ section.service .content:hover .iconBox .icon2 {
 }
 
 section.idea {
-  padding: 70px 0 0 0;
+  padding: 70px 0;
   color: #ffffff;
   background-color: #0C0C0E;
 }
@@ -320,10 +324,11 @@ section.whyus .content {
   background: #ffffff;
   padding: 20px;
   border-radius: 20px;
-  margin-top: 50px;
+  margin: 20px 0;
   border: 2px solid #ffffff;
   box-shadow: 30px 42px 31px rgba(0, 0, 0, 0.01), 13px 19px 23px rgba(0, 0, 0, 0.02), 3px 5px 13px rgba(0, 0, 0, 0.02), 0px 0px 0px rgba(0, 0, 0, 0.02);
   color: #0C0C0E;
+  height: 100%;
   transition: 1s;
 }
 section.whyus .content .heading {
@@ -331,6 +336,19 @@ section.whyus .content .heading {
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
+}
+section.whyus .content .heading .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background-color: #9220d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.whyus .content .heading .icon i {
+  color: #ffffff;
+  font-size: 20px;
 }
 section.whyus .content .heading h2 {
   font-size: 24px;
@@ -402,6 +420,13 @@ section.quote .container {
 }
 section.quote .container .content {
   padding: 40px;
+  color: #1e1e22;
+}
+section.quote .container .content .btn {
+  color: #1e1e22 !important;
+}
+section.quote .container .content .btn:hover {
+  color: white !important;
 }
 
 section.reviews {
@@ -412,16 +437,21 @@ section.reviews {
 section.reviews .item {
   box-shadow: 30px 42px 31px rgba(0, 0, 0, 0.01), 13px 19px 23px rgba(0, 0, 0, 0.02), 3px 5px 13px rgba(0, 0, 0, 0.02), 0px 0px 0px rgba(0, 0, 0, 0.02);
   border-radius: 20px;
-  background: #ffffff;
+  background: #9220d9;
+  text-align: center;
 }
 section.reviews .item .starts img {
   width: 25px;
   display: inline-block;
   margin: 5px;
 }
+section.reviews .item p {
+  color: #ffffff;
+}
 section.reviews .item .clientProfile {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 section.reviews .item .clientProfile .img {
   width: 50px;
@@ -430,6 +460,11 @@ section.reviews .item .clientProfile .img {
 }
 section.reviews .item .clientProfile .img img {
   width: 100%;
+  border-radius: 50%;
+}
+section.reviews .item .clientProfile .text {
+  color: #ffffff;
+  text-align: left;
 }
 section.reviews .item .clientProfile .text p.name {
   margin-bottom: 0;

@@ -1,5 +1,6 @@
-// Google font Outfit
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Google font Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 * {
   margin: 0;
@@ -7,9 +8,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Outfit", "Arial Narrow", Arial, sans-serif;
-}
 
 // Colors
 $primary: #9220d9;
@@ -19,6 +17,12 @@ $lessDark: #1e1e22;
 $bordercolor: #f5f5f5;
 $darkbordercolor: #ededed;
 $light: #ffffff;
+
+body {
+  font-family: "poppins", "Arial Narrow", Arial, sans-serif;
+  background: $bgcolor;
+}
+
 
 // Buttons
 
@@ -164,15 +168,17 @@ section.slider {
 // Section clients
 section.clients {
   padding-top: 30px;
-  background: linear-gradient(360deg,
-      rgba($color: $bgcolor, $alpha: 1) 50%,
-      rgba($color: $secondary, $alpha: 1) 50%);
+  background: $bgcolor;
 
   .container {
-    background: $primary;
+    background: $light;
     padding: 30px;
     border-radius: 20px;
     @include shadow();
+
+    img {
+      width: 60px;
+    }
   }
 }
 
@@ -325,7 +331,7 @@ section.service {
 // Section.Idea
 
 section.idea {
-  padding: 70px 0 0 0;
+  padding: 70px 0;
   color: $light;
   background-color: $bgcolor;
 }
@@ -418,16 +424,30 @@ section.whyus {
     background: $light;
     padding: 20px;
     border-radius: 20px;
-    margin-top: 50px;
+    margin: 20px 0;
     border: 2px solid $light;
     @include shadow();
     color: $bgcolor;
+    height: 100%;
 
     .heading {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-bottom: 15px;
+
+      .icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+        background-color: #9220d9;
+        @include centerMid;
+
+        i {
+          color: $light;
+          font-size: 20px;
+        }
+      }
 
       h2 {
         font-size: 24px;
@@ -516,6 +536,15 @@ section.quote {
 
     .content {
       padding: 40px;
+      color: $lessDark;
+
+      .btn {
+        color: $lessDark !important;
+
+        &:hover {
+          color: white !important;
+        }
+      }
     }
   }
 }
@@ -529,7 +558,8 @@ section.reviews {
   .item {
     @include shadow();
     border-radius: 20px;
-    background: $light;
+    background: $primary;
+    text-align: center;
 
     .starts {
       img {
@@ -539,9 +569,14 @@ section.reviews {
       }
     }
 
+    p {
+      color: $light;
+    }
+
     .clientProfile {
       display: flex;
       gap: 10px;
+      justify-content: center;
 
       .img {
         width: 50px;
@@ -550,10 +585,14 @@ section.reviews {
 
         img {
           width: 100%;
+          border-radius: 50%;
         }
       }
 
       .text {
+        color: $light;
+        text-align: left;
+
         p.name {
           margin-bottom: 0;
           font-weight: 700;
